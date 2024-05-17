@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <h3>
-        Radio button additional reveal input
+        Radio button conditional reveal input
       </h3>
         <MultiChoice>
           <Radio
