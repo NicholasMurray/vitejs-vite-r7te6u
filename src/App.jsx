@@ -1,19 +1,64 @@
-import { useState } from 'react';
-import { RadioProvider } from './components/RadioContext';
-import RadioInputComponent from './components/RadioInputComponent';
+import { MultiChoice } from './components/MultiChoice';
+import { Radio } from './components/Radio';
+import { RadioConditional } from './components/RadioConditional';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <p className="read-the-docs">
-        Radio button conditional reveal
-      </p>
-      <RadioProvider>
-        <RadioInputComponent />
-      </RadioProvider>
+      <h3>
+        Radio button additional reveal input
+      </h3>
+        <MultiChoice>
+          <Radio
+            name="option"
+            value="yes"
+          >
+            Yes
+          </Radio>
+          <Radio
+            name="option"
+            value="no"
+          >
+            No
+          </Radio>
+          <RadioConditional
+            name="option"
+            value="other"
+            label="Other"
+          >
+            <label>
+              Additional Input something else:
+              <input type="checkbox" />
+            </label>
+          </RadioConditional>
+          <Radio
+            name="option"
+            value="whatever"
+          >
+            Whatever
+          </Radio>
+          <RadioConditional
+            name="option"
+            value="something"
+            label="Something"
+            >
+            <MultiChoice>
+              <Radio
+                name="option"
+                value="yes"
+              >
+                Yes
+              </Radio>
+              <Radio
+                name="option"
+                value="no"
+              >
+                No
+              </Radio>
+            </MultiChoice>
+          </RadioConditional>
+        </MultiChoice>
     </>
   );
 }
