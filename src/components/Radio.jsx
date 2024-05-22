@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Radio = ({ children, handleRadioChange, name, checked, value }) => {
+export const Radio = ({ children, handleRadioChange, name, checked, value, defaultChecked }) => {
     return (
       <label className="radio">
         <input
@@ -10,7 +10,7 @@ export const Radio = ({ children, handleRadioChange, name, checked, value }) => 
           checked={checked}
           onChange={handleRadioChange}
         />
-        { children }
+        { children } { defaultChecked && <span> - <b>default checked</b></span>}
       </label>
     );
 };

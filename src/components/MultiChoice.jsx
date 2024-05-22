@@ -2,11 +2,11 @@ import React from 'react';
 import { RadioProvider } from './RadioContext';
 import { MultiChoiceContainer } from './MultiChoiceContainer';
 
-export const MultiChoice = ({ children }) => {
+export const MultiChoice = ({ children, defaultChecked }) => {
 
   return (
     <RadioProvider>
-      <MultiChoiceContainer>{ children }</MultiChoiceContainer>
+      <MultiChoiceContainer defaultChecked={defaultChecked}>{ children }</MultiChoiceContainer>
     </RadioProvider>
   );
 };

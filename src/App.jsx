@@ -9,7 +9,7 @@ function App() {
       <h3>
         Radio button conditional reveal input
       </h3>
-        <MultiChoice>
+        <MultiChoice defaultChecked="no">
           <Radio
             name="option"
             value="yes"
@@ -28,8 +28,8 @@ function App() {
             label="Other"
           >
             <label>
-              Additional Input something else:
-              <input type="checkbox" />
+              <div>Additional Input</div>
+              <input type="text" />
             </label>
           </RadioConditional>
           <Radio
