@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <h3>
-        Radio button conditional reveal input
+        MultiChoice Radio button conditional reveal input
       </h3>
         <MultiChoice defaultChecked="no">
           <Radio

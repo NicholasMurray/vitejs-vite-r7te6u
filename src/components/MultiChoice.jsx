@@ -1,12 +1,12 @@
 import React from 'react';
-import { RadioProvider } from './RadioContext';
+import { MultiChoiceProvider } from './MultiChoiceContext';
 import { MultiChoiceContainer } from './MultiChoiceContainer';
 
 export const MultiChoice = ({ children, defaultChecked }) => {
 
   return (
-    <RadioProvider>
+    <MultiChoiceProvider>
       <MultiChoiceContainer defaultChecked={defaultChecked}>{ children }</MultiChoiceContainer>
-    </RadioProvider>
+    </MultiChoiceProvider>
   );
 };

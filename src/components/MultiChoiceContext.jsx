@@ -1,17 +1,17 @@
 import React, { createContext, useState } from 'react';
 
-const RadioContext = createContext();
+const MultiChoiceContext = createContext();
 
-const RadioProvider = ({ children }) => {
+const MultiChoiceProvider = ({ children }) => {
   const [selectedValue, setSelectedValue] = useState(null);
 
   return (
-    <RadioContext.Provider
+    <MultiChoiceContext.Provider
       value={{ selectedValue, setSelectedValue }}
     >
       {children}
-    </RadioContext.Provider>
+    </MultiChoiceContext.Provider>
   );
 };
 
-export { RadioContext, RadioProvider };
+export { MultiChoiceContext, MultiChoiceProvider };

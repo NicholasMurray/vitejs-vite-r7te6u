@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react';
-import { RadioContext } from './RadioContext';
+import { MultiChoiceContext } from './MultiChoiceContext';
 
 export const MultiChoiceContainer = ({ children, defaultChecked }) => {
   const { selectedValue, setSelectedValue } =
-    useContext(RadioContext);
+    useContext(MultiChoiceContext);
 
   const handleRadioChange = (event) => {
     setSelectedValue(event.target.value);
